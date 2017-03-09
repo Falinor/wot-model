@@ -1,6 +1,6 @@
 {
   "name": "wot-model",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wot-model",
   "license": "MIT",
   "homepage": "https://github.com/Falinor/wot-model#readme",
@@ -23,7 +23,7 @@
     "WoT"
   ],
   "files": [
-    "dist"
+    "dist/*"
   ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -36,8 +36,7 @@
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^3.0.0",
     "@types/mocha": "^2.0.0",

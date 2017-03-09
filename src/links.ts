@@ -1,8 +1,3 @@
-export interface Link {
-  link: string;
-  title: string;
-}
-
 export interface Links {
   model?: Link;
   properties?: Link;
@@ -13,4 +8,17 @@ export interface Links {
   product?: Link;
   help?: Link;
   ui?: Link;
+}
+
+export interface Link {
+  link: string;
+  title: string;
+  resources?: Resource;
+}
+
+export interface Resource {
+  name?: string;
+  description?: string;
+  values?: any;
+  tags?: string[];
 }
