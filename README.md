@@ -1,25 +1,21 @@
-# Using this module in other modules
+# Note
 
-Here is a quick example of how this module can be used in other modules. The [TypeScript Module Resolution Logic](https://www.typescriptlang.org/docs/handbook/module-resolution.html) makes it quite easy. The file `src/index.ts` acts as an aggregator of all the functionality in this module. It imports from other files and re-exports to provide a unified interface for this module. The _package.json_ file contains `main` attribute that points to the generated `lib/index.js` file and `typings` attribute that points to the generated `lib/index.d.ts` file.
+This project is pretty much in an early stage. Do not rely heavily on it, nor
+use it in production.
 
-> If you are planning to have code in multiple files (which is quite natural for a NodeJS module) that users can import, make sure you update `src/index.ts` file appropriately.
+The goal is to provide basic types, written in TypeScript, that comply with Web
+of Things model defined in http://model.webofthings.io.
 
-Now assuming you have published this amazing module to _npm_ with the name `my-amazing-lib`, and installed it in the module in which you need it -
+# Installation
 
-- To use the `Greeter` class in a TypeScript file -
+`$ yarn add --dev wot-model`
 
-```ts
-import { Greeter } from "my-amazing-lib";
+or
 
-const greeter = new Greeter("World!");
-greeter.greet();
-```
+`$ npm install --save-dev wot-model`
 
-- To use the `Greeter` class in a JavaScript file -
+# TODO
 
-```js
-const Greeter = require('my-amazing-lib').Greeter;
-
-const greeter = new Greeter('World!');
-greeter.greet();
-```
+- Documentation (including README)
+- Review build
+- Tests
