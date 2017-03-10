@@ -1,3 +1,11 @@
+import { Resource } from './resource';
+
+export interface Link {
+  link: string;
+  title: string;
+  resources?: Resource;
+}
+
 export interface Links {
   model?: Link;
   properties?: Link;
@@ -8,17 +16,6 @@ export interface Links {
   product?: Link;
   help?: Link;
   ui?: Link;
-}
-
-export interface Link {
-  link: string;
-  title: string;
-  resources?: Resource;
-}
-
-export interface Resource {
-  name?: string;
-  description?: string;
-  values?: any;
-  tags?: string[];
+  // Note that each custom link should start with an underscore '_'
+  [customLink: string]: Link;
 }
